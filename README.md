@@ -1,4 +1,5 @@
 # Global Coffee Reviews Analysis
+Tableau Link: https://public.tableau.com/app/profile/arefen.islam/viz/Global_Coffee_Beans_Analysis/RoastLevelInsightsDashboard#1
 
 This project explores global specialty coffee reviews using **web scraping, data cleaning, and data visualization**.  
 The workflow covers scraping raw data, transforming it into a structured dataset, and creating **interactive Tableau dashboards** to analyze insights on coffee origins, roast levels, ratings, prices, and flavor profiles.
