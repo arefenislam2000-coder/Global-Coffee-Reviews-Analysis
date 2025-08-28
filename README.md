@@ -15,7 +15,7 @@ This project provides a deep, data-driven exploration of the global specialty co
 
 ---
 
-## Key Analyses Performed
+## Key Analysis Performed
 
 1.  **Coffee Origins**: Count of varieties and average ratings.
 2.  **Roast Levels**: Distribution, average sensory scores, and ratings.
