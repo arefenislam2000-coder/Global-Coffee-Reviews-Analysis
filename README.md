@@ -4,7 +4,7 @@ This project provides a deep, data-driven exploration of the global specialty co
 
 ---
 
-## 🔧 Tools & Environment
+## Tools & Environment
 
 - **Python (Google Colab)**: For data collection, cleaning, and analysis.
 - **Pandas**: For data manipulation and transformation.
@@ -15,7 +15,7 @@ This project provides a deep, data-driven exploration of the global specialty co
 
 ---
 
-## 📊 Key Analyses Performed
+## Key Analyses Performed
 
 1.  **Coffee Origins**: Count of varieties and average ratings.
 2.  **Roast Levels**: Distribution, average sensory scores, and ratings.
@@ -28,7 +28,7 @@ This project provides a deep, data-driven exploration of the global specialty co
 
 ---
 
-## 🔍 Research Findings
+## Research Findings
 
 ### 1. Coffee Origins & Countries
 
@@ -82,7 +82,7 @@ This project provides a deep, data-driven exploration of the global specialty co
 -   **Price vs. Quality**:
     -   While the most expensive coffees can achieve top-tier scores (e.g., a $1272/100g coffee scored a 98), high quality is **not always tied to extreme prices**. For instance, a coffee priced at $293/100g also scored a 97.
 
-### 🌟 Exceptional Finding: Kahiko Orange – A Game Changer
+### Exceptional Finding: Kahiko Orange – A Game Changer
 
 The analysis uncovered a remarkable outlier:
 
@@ -94,7 +94,7 @@ The analysis uncovered a remarkable outlier:
 
 ---
 
-## ✅ Overall Conclusion
+## Overall Conclusion
 
 1.  **Best Origin**: **Sidamo, Ethiopia** stands out for its high ratings and popularity.
 2.  **Preferred Roast**: **Light roasts** are the clear favorite for quality and preference.
@@ -105,7 +105,7 @@ The analysis uncovered a remarkable outlier:
 
 ---
 
-## ▶️ How to Reproduce This Analysis
+## How to Reproduce This Analysis
 
 1.  **Clone the repository**:
     ```bash
@@ -125,7 +125,7 @@ The analysis uncovered a remarkable outlier:
 
 ---
 
-## 🙌 Credits
+## Credits
 
 -   **Data Source**: [CoffeeReview.com](https://www.coffeereview.com/ )
 -   **Developed by**: [arefenislam2000-coder](https://github.com/arefenislam2000-coder )
