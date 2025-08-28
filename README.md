@@ -1,114 +1,131 @@
-# Global Coffee Reviews Analysis
+# ☕ Global Coffee Bean Analysis
 
-
-This project explores global specialty coffee reviews using **web scraping, data cleaning, and data visualization**.  
-The workflow covers scraping raw data, transforming it into a structured dataset, and creating **interactive Tableau dashboards** to analyze insights on coffee origins, roast levels, ratings, prices, and flavor profiles.
+This project provides a deep, data-driven exploration of the global specialty coffee market, using web scraping, data cleaning, transformation, and visualization. The goal is to extract insightful trends on coffee origins, roast levels, ratings, prices, and flavor profiles, offering value to both coffee enthusiasts and industry professionals. It also provides a reproducible workflow for coders and data scientists.
 
 ---
 
+## 🔧 Tools & Environment
 
+- **Python (Google Colab)**: For data collection, cleaning, and analysis.
+- **Pandas**: For data manipulation and transformation.
+- **re (Regular Expressions)**: For extracting price, quantity, and currency.
+- **Tableau**: For creating interactive dashboards for visualization.
 
-## ⚙️ Python Environment and Packages
+**View the Interactive Dashboard:** [Tableau Public](https://public.tableau.com/app/profile/arefen.islam/viz/Global_Coffee_Beans_Analysis/OverviewDashboard1 )
 
-The project was developed in **Google Colab**.
-<br>
-**Tableau Link**: https://public.tableau.com/app/profile/arefen.islam/viz/Global_Coffee_Beans_Analysis/RoastLevelInsightsDashboard#1
+---
 
-### Required Libraries
-```python
-import pandas as pd
-import re
-from google.colab import files
-````
+## 📊 Key Analyses Performed
 
-### Package Usage
+1.  **Coffee Origins**: Count of varieties and average ratings.
+2.  **Roast Levels**: Distribution, average sensory scores, and ratings.
+3.  **Producing Countries & States**: Top performers by average rating.
+4.  **Single Origin vs. Blends**: Comparison of quality and price.
+5.  **Price Analysis**: Correlation between roast level, origin, and price.
+6.  **Value Analysis**: Relationship between high price and high ratings.
+7.  **Popularity**: Most frequently reviewed coffee beans.
+8.  **Top Performers**: Identification of the highest-rated beans.
 
-* **`google.colab`**
+---
 
-  * Upload/download files in Colab (`from google.colab import files`).
+## 🔍 Research Findings
 
-* **`pandas`**
+### 1. Coffee Origins & Countries
 
-  * Functions: `read_csv()`, `head()`, `drop_duplicates()`, `isnull().sum()`,
-    `fillna()`, `apply()`, `to_datetime()`, `to_csv()`, `corr()`
-  * Used for data cleaning, manipulation, and analysis.
+-   **Most Prolific Origins (by number of reviews)**:
+    -   **Huila Department, Colombia**: 265 reviews (Avg Rating: 93.47)
+    -   **Sidamo, Southern Ethiopia**: 240 reviews (Avg Rating: 94.21)
+    -   **Guji Zone, Oromia, Ethiopia**: 200 reviews (Avg Rating: 93.55)
+-   > **Insight**: **Sidamo, Ethiopia** emerges as a top-tier origin, balancing a high number of reviews with the highest average rating among the leaders.
 
-* **`re` (Regular Expressions)**
+-   **Top Roaster Countries (by average rating)**:
+    -   **Taiwan**: Avg Rating: 93.52
+    -   **USA**: Avg Rating: 93.20
 
-  * Extracts price, quantity, and currency from strings:
+-   **Top Roaster States (by average rating)**:
+    -   **Hawai’i, USA**: Avg Rating: 95.06
+    -   **Chia-Yi County, Taiwan**: Avg Rating: 94.20
 
-    ```python
-    match = re.search(r"(\$|NT\$|RMB|£|RM|HK\$)?(\d+\.?\d*)/(\d+\.?\d*)(oz|ounces|g|grams|kilogram|kg|capsules)?", price_str, re.IGNORECASE)
+### 2. Roast Level Insights
+
+-   **Distribution of Roasts**:
+    -   **Light**: 47.3%
+    -   **Medium-Light**: 45.3%
+    -   **Medium**: 5.1%
+-   > **Insight**: The specialty market overwhelmingly prefers lighter roasts to preserve the bean's original flavors.
+
+-   **Roast vs. Quality**:
+    | Roast Level | Avg. Sensory Score | Avg. Rating |
+    | :---------- | :----------------- | :---------- |
+    | Light | 8.75 | 93.76 |
+    | Medium-Light| 8.61 | 93.14 |
+    | Medium | 8.29 | 91.68 |
+-   > **Insight**: **Lighter roasts consistently receive higher ratings** and sensory scores.
+
+### 3. Single Origin vs. Blend
+
+-   **Quality Comparison**:
+    -   **Blends**: Avg. Sensory Score: 8.70, Avg. Rating: 93.54
+    -   **Single Origins**: Avg. Sensory Score: 8.32, Avg. Rating: 91.74
+-   > **Insight**: **Blends slightly outperform single origins** in both sensory scores and overall ratings in this dataset.
+
+-   **Price Insights**:
+    -   Blends are generally more expensive than single origins across most roast levels.
+
+### 4. Price & Value Analysis
+
+-   **Most Expensive Coffees**:
+    -   **Paso Ancho, Panama**: ~$2500/100g (Medium-Light roast)
+    -   **Boquete Region, Panama**: ~$2000/100g (Light roast)
+-   > **Insight**: **Panama Geisha** coffees dominate the ultra-premium market segment.
+
+-   **Price vs. Quality**:
+    -   While the most expensive coffees can achieve top-tier scores (e.g., a $1272/100g coffee scored a 98), high quality is **not always tied to extreme prices**. For instance, a coffee priced at $293/100g also scored a 97.
+
+### 🌟 Exceptional Finding: Kahiko Orange – A Game Changer
+
+The analysis uncovered a remarkable outlier:
+
+-   **Coffee**: **Kahiko Orange (Blend)**
+-   **Rating**: **98** (tied for the highest in the dataset)
+-   **Sensory Score**: **9.6**
+-   **Price**: **$44/100g**
+-   > **Conclusion**: This coffee proves that **world-class quality can be achieved at an affordable price point**, challenging the common assumption that top-tier coffee must be prohibitively expensive.
+
+---
+
+## ✅ Overall Conclusion
+
+1.  **Best Origin**: **Sidamo, Ethiopia** stands out for its high ratings and popularity.
+2.  **Preferred Roast**: **Light roasts** are the clear favorite for quality and preference.
+3.  **Best Type**: **Blends** show a slight edge over single origins in sensory scores and ratings.
+4.  **Price & Quality**: Price is **not a reliable standalone indicator of quality**. While premium coffees are expensive, exceptional value exists.
+5.  **Market Leader**: **Panama Geisha** coffees define the luxury end of the market.
+6.  **Key Takeaway**: The discovery of **Kahiko Orange** highlights that exceptional quality can be accessible, disrupting traditional market views.
+
+---
+
+## ▶️ How to Reproduce This Analysis
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/arefenislam2000-coder/Global-Coffee-Reviews-Analysis.git
+    cd Global-Coffee-Reviews-Analysis
     ```
 
----
+2.  **Run the Notebooks in Google Colab**:
+    -   `Notebook/CoffeeReview_WebScraping.ipynb` (for web scraping )
+    -   `Notebook/CoffeeReviews_DataProcessing_Transformation_Manipulation.ipynb` (for data cleaning)
 
-## 📊 Key Analyses
+3.  **Explore the Cleaned Dataset**:
+    -   The final dataset is available at `Data/coffee_reviews_cleaned.csv`.
 
-1. Coffee origins that produce the maximum beans
-2. Distribution of roast levels
-3. Roast level vs. average rating / sensory score
-4. Top coffee-producing countries by average rating
-5. Top coffee-producing states
-6. Single origin vs blends
-7. Correlation: Roast level vs price
-8. Most expensive coffee combinations (Origin × Roast Level)
-9. Price comparison: Single origin vs blends
-10. Most reviewed coffee beans
-11. Do expensive coffees really score higher?
-12. The most expensive coffee beans
-13. Top rated coffee beans
-
----
-
-## ▶️ How to Run
-
-1. **Clone the repo**
-
-   ```bash
-   git clone https://github.com/arefenislam2000-coder/Global-Coffee-Reviews-Analysis.git
-   cd Global-Coffee-Reviews-Analysis
-   ```
-
-2. **Open Notebooks in Google Colab**
-
-   * `Notebook/CoffeeReview_WebScraping.ipynb` → Scrape raw data
-   * `Notebook/CoffeeReviews_DataProcessing_Transformation_Manipulation.ipynb` → Clean & transform data
-
-3. **Install required packages (if needed)**
-
-   ```bash
-   !pip install pandas
-   ```
-
-4. **Explore the cleaned dataset**
-
-   * Located in the `Data` folder.
-
-5. **Visualize insights in Tableau**
-
-   * Open files in the `Tableau` folder.
-
----
-
-## 📝 Notes
-
-* Dataset includes calculated fields like **price per 100g**, **average sensory score**, and **normalized roast levels**.
-* Tableau dashboards include filters for **year, roast level, origin type, and rating**.
-* Focus: **specialty coffee trends, price-value analysis, and flavor profiling** across global origins.
+4.  **Visualize the Insights**:
+    -   Open the files in the `Tableau` folder to view the interactive dashboards.
 
 ---
 
 ## 🙌 Credits
 
-* **Data Source:** [CoffeeReview.com](https://www.coffeereview.com/)
-* **Developed by:** [arefenislam2000-coder](https://github.com/arefenislam2000-coder)
-
----
-
-```
-
----
-
-
-
+-   **Data Source**: [CoffeeReview.com](https://www.coffeereview.com/ )
+-   **Developed by**: [arefenislam2000-coder](https://github.com/arefenislam2000-coder )
